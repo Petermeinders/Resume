@@ -1,12 +1,14 @@
 ---
 import resume from '../data/resume.json';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="site-header">
   <div class="site-header__inner">
     <img
       class="site-header__photo"
-      src="/images/profile.jpg"
+      src={`${base}images/profile.jpg`}
       alt="Peter Meinders"
       width="120"
       height="120"

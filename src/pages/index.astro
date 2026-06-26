@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectList from '../components/ProjectList.astro';
 import resume from '../data/resume.json';
+
+const base = import.meta.env.BASE_URL;
+const toHref = (path: string) => `${base}${path.replace(/^\//, '')}`;
 ---
 
 <BaseLayout title="Peter Meinders" currentPath="/">
@@ -18,7 +21,7 @@ import resume from '../data/resume.json';
     <section class="card">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
         <h2 class="card__title" style="border: none; padding: 0; margin: 0;">Personal Projects</h2>
-        <a class="card__link" href="/projects">Details →</a>
+        <a class="card__link" href={toHref('/projects')}>Details →</a>
       </div>
       <ProjectList projects={resume.projects} />
     </section>
@@ -50,7 +53,7 @@ import resume from '../data/resume.json';
     <section class="card">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
         <h2 class="card__title" style="border: none; padding: 0; margin: 0;">Experience</h2>
-        <a class="card__link" href="/experience">Details →</a>
+        <a class="card__link" href={toHref('/experience')}>Details →</a>
       </div>
       <ul class="highlights">
         {resume.highlights.map((item) => <li>{item}</li>)}

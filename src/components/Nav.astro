@@ -4,12 +4,16 @@ interface Props {
 }
 
 const { currentPath } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const toHref = (path: string) =>
+  path === '/' ? base : `${base}${path.replace(/^\//, '')}`;
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/skills', label: 'Skills' },
-  { href: '/projects', label: 'Projects' },
+  { path: '/', label: 'Home' },
+  { path: '/experience', label: 'Experience' },
+  { path: '/skills', label: 'Skills' },
+  { path: '/projects', label: 'Projects' },
 ];
 ---
 
@@ -18,8 +22,8 @@ const links = [
     {
       links.map((link) => (
         <a
-          href={link.href}
-          class:list={{ active: currentPath === link.href }}
+          href={toHref(link.path)}
+          class:list={{ active: currentPath === link.path }}
         >
           {link.label}
         </a>
