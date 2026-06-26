@@ -395,6 +395,12 @@ img {
   color: var(--color-highlight);
 }
 
+@media (min-width: 1024px) {
+  .project-tilt-grid > .project-tilt-card:nth-child(4):last-child {
+    grid-column: 2;
+  }
+}
+
 @media (max-width: 1023px) {
   .project-tilt-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

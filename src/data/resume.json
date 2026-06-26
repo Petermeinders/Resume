@@ -71,6 +71,17 @@
       ]
     }
   ],
+  "aiTech": [
+    "Claude CLI",
+    "Cursor",
+    "Agentic Coding",
+    "Agent Management",
+    "Prompt Engineering",
+    "MCP (Model Context Protocol)",
+    "LLM Integration",
+    "AI Workflow Automation",
+    "Claude Code"
+  ],
   "skills": [
     "ASP.NET",
     "Blazor",
@@ -136,6 +147,11 @@
       "name": "VSCodeBlocks (Typescript, Svelte)",
       "description": "",
       "url": "https://github.com/Petermeinders/VSCodeBlocks"
+    },
+    {
+      "name": "AI: The Unmaking of the Soul",
+      "description": "",
+      "url": "https://petermeinders.github.io/AIWorld/"
     }
   ],
   "featuredProjects": [
@@ -156,6 +172,18 @@
       "url": "https://github.com/Petermeinders/VSCodeBlocks",
       "image": "/images/projects/vscode-blocks.png",
       "createdDate": "July 2021"
+    },
+    {
+      "name": "AI: The Unmaking of the Soul",
+      "url": "https://petermeinders.github.io/AIWorld/",
+      "image": "/images/projects/ai-unmaking-of-the-soul.png",
+      "createdDate": "March 2026"
+    },
+    {
+      "name": "Standup and Deliver",
+      "url": "https://www.standupanddeliver.com/",
+      "image": "/images/projects/standup-and-deliver.png",
+      "createdDate": "June 2026"
     }
   ]
 }
