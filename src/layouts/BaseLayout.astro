@@ -1,0 +1,34 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+
+interface Props {
+  title: string;
+  currentPath: string;
+  wide?: boolean;
+}
+
+const { title, currentPath, wide = false } = Astro.props;
+const pageTitle = title === 'Peter Meinders' ? title : `${title} — Peter Meinders`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Resume of Peter Meinders — Full-Stack Sr. Software Engineer" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <Nav currentPath={currentPath} />
+    <main class:list={['site-main', wide && 'site-main--wide']}>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>&copy; {new Date().getFullYear()} Peter Meinders</p>
+    </footer>
+  </body>
+</html>

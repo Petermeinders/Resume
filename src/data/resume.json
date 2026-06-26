@@ -1,0 +1,161 @@
+{
+  "name": "Peter Meinders",
+  "title": "Full-Stack Sr. Software Engineer",
+  "overview": "Full-Stack Sr. Software Engineer and IT Specialist with a passion for problem solving, learning, and team building. Self-motivated goal-oriented with the desire to contribute both to a team and the development process",
+  "language": "English (US)",
+  "highlights": [
+    "20+ Languages/Libraries/Markups",
+    "20+ Client's System Administrator",
+    "20+ Wordpress sites created and supported"
+  ],
+  "contact": {
+    "email": "petermeinder@gmail.com",
+    "location": "Rossville, Ga",
+    "phone": "(706) 623 7678",
+    "website": "https://petermeinders.com",
+    "github": "https://github.com/Petermeinders",
+    "linkedin": "https://www.linkedin.com/in/peter-meinders-a5129b82/"
+  },
+  "education": {
+    "school": "Southern Polytechnic State University",
+    "degree": "B.S. in Information Technology",
+    "graduationDate": "2014",
+    "location": "Marietta, Ga"
+  },
+  "experience": [
+    {
+      "title": "Sr. Developer",
+      "company": "Novus Media",
+      "dates": "2022 - present",
+      "bullets": [
+        "Managed 12 web applications and provided improvements and bug fixes as needed.",
+        "Redesigned integration of financial pipeline to Netsuite and updated documentation on process.",
+        "Worked and debugged Azure Service Bus and NServiceBus to provide messaging between systems.",
+        "Leveraged the Power Platform to help reduce complex low level code integrations."
+      ]
+    },
+    {
+      "title": "Sr. Systems Engineer",
+      "company": "Shaw Industries",
+      "dates": "2020 - 2022",
+      "bullets": [
+        "Led a team in maintaining and improving 2 large eCommerce web applications.",
+        "Oversaw a successful transition when losing 20+ developers including the team's lead engineer.",
+        "Updated and performed production code turnovers through AWS and Github.",
+        "Improved redundancy in our production environment with Azure Indexes.",
+        "Maintained backend .Net MVC code while working in tandem with the frontend team on React and Vue changes."
+      ]
+    },
+    {
+      "title": "Systems Engineer",
+      "company": "Shaw Industries",
+      "dates": "2017 - 2020",
+      "bullets": [
+        "Built custom Azure Functions that integrate a live chat system and custom company applications to receive up-to-date product information.",
+        "Developed and updated ServiceNow logic workflows with custom Powershell scripts and REST API calls based on rapidly changing industry demands.",
+        "Designed API's in our web application to interface with other company software."
+      ]
+    },
+    {
+      "title": "IT Specialist and Jr. Developer",
+      "company": "InventureIT",
+      "dates": "2014 - 2017",
+      "bullets": [
+        "Served as System Administrator for 20+ clients with remote and onsite support.",
+        "Implemented and serviced full scale IT support for business class PC's, networks, servers, and miscellaneous hardware and software.",
+        "Created, maintained, and supported 20+ wordpress websites.",
+        "Handled security, backups, and malware prevention systems.",
+        "Added a QR reading feature to an android LiftTruck tracking application.",
+        "Wrote a VBA/Excel based sports field calculation software that rendered an accurately scaled layout of the field that the sales team would show potential customers.",
+        "Developed numerous code fixes and features in our EMR software for both the windows application, and web based portal using Winforms and WPF."
+      ]
+    }
+  ],
+  "skills": [
+    "ASP.NET",
+    "Blazor",
+    "C# (Winforms MVC .Net Core)",
+    "CSS",
+    "Entity Framework",
+    "HTML",
+    "JSON",
+    "Java",
+    "JS",
+    "LINQ",
+    "Lucene",
+    "Powershell",
+    "React",
+    "REST",
+    "SQL",
+    "Svelte",
+    "Typescript",
+    "VBA",
+    "Vue",
+    "WPF",
+    "Webforms",
+    "XAML",
+    "XML"
+  ],
+  "tools": [
+    "Visual Studio 2013-2022",
+    "VSCode",
+    "Kentico",
+    "IIS",
+    "Postman",
+    "AWS",
+    "Elastic BeanStalk",
+    "Github",
+    "Github Actions",
+    "Azure",
+    "ServiceNow",
+    "cPanel",
+    "Vmware/Virtualbox/HyperV",
+    "Filezilla",
+    "Sublime Text",
+    "Putty",
+    "Unity",
+    "SSRS"
+  ],
+  "projects": [
+    {
+      "name": "PeterMeinders.com",
+      "description": "",
+      "url": "https://petermeinders.com"
+    },
+    {
+      "name": "Crypt-Sweepers.com",
+      "description": "",
+      "url": "https://crypt-sweepers.com"
+    },
+    {
+      "name": "The Construct (VR, C#, Unity)",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=G_0xmZd0tiE"
+    },
+    {
+      "name": "VSCodeBlocks (Typescript, Svelte)",
+      "description": "",
+      "url": "https://github.com/Petermeinders/VSCodeBlocks"
+    }
+  ],
+  "featuredProjects": [
+    {
+      "name": "Crypt Sweepers",
+      "url": "https://crypt-sweepers.com",
+      "image": "/images/projects/crypt-sweepers.png",
+      "createdDate": "April 2026"
+    },
+    {
+      "name": "The Construct",
+      "url": "https://www.youtube.com/watch?v=G_0xmZd0tiE",
+      "image": "/images/projects/the-construct.png",
+      "createdDate": "July 2022"
+    },
+    {
+      "name": "VSCode Blocks",
+      "url": "https://github.com/Petermeinders/VSCodeBlocks",
+      "image": "/images/projects/vscode-blocks.png",
+      "createdDate": "July 2021"
+    }
+  ]
+}

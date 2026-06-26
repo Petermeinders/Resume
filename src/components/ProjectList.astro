@@ -1,0 +1,24 @@
+---
+interface Project {
+  name: string;
+  description: string;
+  url: string;
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<ul class="project-list">
+  {
+    projects.map((project) => (
+      <li>
+        <a href={project.url}>{project.name}</a>
+        {project.description && <span> — {project.description}</span>}
+      </li>
+    ))
+  }
+</ul>

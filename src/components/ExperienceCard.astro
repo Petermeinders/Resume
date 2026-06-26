@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  dates: string;
+  bullets: string[];
+}
+
+const { title, company, dates, bullets } = Astro.props;
+---
+
+<article class="card experience-card">
+  <h2>{title}</h2>
+  <p class="experience-card__meta">{company} | {dates}</p>
+  <ul>
+    {bullets.map((bullet) => <li>{bullet}</li>)}
+  </ul>
+</article>

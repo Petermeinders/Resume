@@ -1,0 +1,76 @@
+---
+interface FeaturedProject {
+  name: string;
+  url: string;
+  image: string;
+  createdDate: string;
+}
+
+interface Props {
+  projects: FeaturedProject[];
+}
+
+const { projects } = Astro.props;
+---
+
+<div class="project-tilt-grid">
+  {
+    projects.map((project) => (
+      <a
+        href={project.url}
+        class="project-tilt-card"
+        data-tilt
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${project.name} — ${project.createdDate}`}
+      >
+        <div class="project-tilt-card__inner">
+          <div class="project-tilt-card__media">
+            <img
+              src={project.image}
+              alt={project.name}
+              class="project-tilt-card__image"
+            />
+          </div>
+          <div class="project-tilt-card__meta">
+            <span class="project-tilt-card__name">{project.name}</span>
+            <time class="project-tilt-card__date">{project.createdDate}</time>
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</div>
+
+<script>
+  function initTiltCards() {
+    const cards = document.querySelectorAll<HTMLElement>("[data-tilt]");
+
+    cards.forEach((card) => {
+      const inner = card.querySelector<HTMLElement>(".project-tilt-card__inner");
+      if (!inner) return;
+
+      const maxTilt = 12;
+      const lift = 18;
+
+      card.addEventListener("mousemove", (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const px = (x / rect.width) * 2 - 1;
+        const py = (y / rect.height) * 2 - 1;
+        const rotateY = px * maxTilt;
+        const rotateX = py * -maxTilt;
+
+        inner.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${lift}px) scale(1.04)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        inner.style.transform = "";
+      });
+    });
+  }
+
+  initTiltCards();
+  document.addEventListener("astro:page-load", initTiltCards);
+</script>

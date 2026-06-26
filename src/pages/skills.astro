@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SkillsGrid from '../components/SkillsGrid.astro';
+import ProjectList from '../components/ProjectList.astro';
+import resume from '../data/resume.json';
+---
+
+<BaseLayout title="Skills" currentPath="/skills">
+  <h1 class="page-title">Skills</h1>
+
+  <div class="card-grid" style="gap: 1.25rem;">
+    <section class="card">
+      <h2 class="card__title">Knowledge</h2>
+      <div class="info-row">
+        <span class="info-row__label">Language</span>
+        <span>{resume.language}</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card__title">Frameworks / Libraries / Markup</h2>
+      <SkillsGrid items={resume.skills} />
+    </section>
+
+    <section class="card">
+      <h2 class="card__title">Tools / Utilities</h2>
+      <SkillsGrid items={resume.tools} />
+    </section>
+
+    <section class="card">
+      <h2 class="card__title">Personal Projects</h2>
+      <ProjectList projects={resume.projects} />
+    </section>
+  </div>
+</BaseLayout>

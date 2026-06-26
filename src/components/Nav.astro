@@ -1,0 +1,29 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/skills', label: 'Skills' },
+  { href: '/projects', label: 'Projects' },
+];
+---
+
+<nav class="site-nav" aria-label="Main">
+  <div class="site-nav__inner">
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class:list={{ active: currentPath === link.href }}
+        >
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+</nav>

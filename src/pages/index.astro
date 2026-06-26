@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectList from '../components/ProjectList.astro';
+import resume from '../data/resume.json';
+---
+
+<BaseLayout title="Peter Meinders" currentPath="/">
+  <div class="card-grid card-grid--2">
+    <section class="card">
+      <h2 class="card__title">Overview</h2>
+      <p>{resume.overview}</p>
+      <div class="btn-row">
+        <a class="btn" href={resume.contact.github}>GitHub</a>
+        <a class="btn" href={resume.contact.linkedin}>LinkedIn</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+        <h2 class="card__title" style="border: none; padding: 0; margin: 0;">Personal Projects</h2>
+        <a class="card__link" href="/projects">Details →</a>
+      </div>
+      <ProjectList projects={resume.projects} />
+    </section>
+
+    <section class="card">
+      <h2 class="card__title">My Information</h2>
+      <div class="info-row">
+        <span class="info-row__label">Name</span>
+        <span>{resume.name}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-row__label">Location</span>
+        <span>{resume.contact.location}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-row__label">Email</span>
+        <span><a href={`mailto:${resume.contact.email}`}>{resume.contact.email}</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-row__label">GitHub</span>
+        <span><a href={resume.contact.github}>PeterMeinders</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-row__label">Phone</span>
+        <span>{resume.contact.phone}</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+        <h2 class="card__title" style="border: none; padding: 0; margin: 0;">Experience</h2>
+        <a class="card__link" href="/experience">Details →</a>
+      </div>
+      <ul class="highlights">
+        {resume.highlights.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="card__title">Education</h2>
+      <p><strong>{resume.education.degree}</strong></p>
+      <p>{resume.education.school}</p>
+      <p>{resume.education.location} · {resume.education.graduationDate}</p>
+    </section>
+  </div>
+</BaseLayout>

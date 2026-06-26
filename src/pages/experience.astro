@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+import resume from '../data/resume.json';
+---
+
+<BaseLayout title="Experience" currentPath="/experience">
+  <h1 class="page-title">Experience</h1>
+  <div class="experience-list">
+    {
+      resume.experience.map((job) => (
+        <ExperienceCard
+          title={job.title}
+          company={job.company}
+          dates={job.dates}
+          bullets={job.bullets}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

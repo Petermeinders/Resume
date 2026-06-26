@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectTiltGrid from '../components/ProjectTiltGrid.astro';
+import resume from '../data/resume.json';
+---
+
+<BaseLayout title="Projects" currentPath="/projects" wide>
+  <h1 class="page-title">Projects</h1>
+  <ProjectTiltGrid projects={resume.featuredProjects} />
+</BaseLayout>
